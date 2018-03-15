@@ -68,6 +68,8 @@ strong{
     line-height:22px;
     text-align: justify;
     padding:.5em;
+    max-width:600px;
+    width:80%;
 }
 
 #information h1{
@@ -118,4 +120,100 @@ strong{
 
 .infoboxtable span{
     font-weight:bold;
+}
+
+.smallinfo{
+    display:inline-block;
+    width:250px;
+    height:200px;
+    padding:.5em;
+}
+
+.smallinfobox{
+    background: #fff;
+    box-shadow: 0 0 15px #EBEBF0;
+    padding:.5em;
+    margin:.5em;
+}
+
+
+.smallinfo h2{
+    font-family: "Work Sans";
+    font-weight:700;
+    margin: 0;
+    text-align: center;
+}
+
+.smallinfo h3{
+    font-size:18px;
+    margin:0;
+    font-weight:300;
+    text-align: center;
+}
+
+.detailbox{
+    display:inline-block;
+    width:60px;
+    margin-left:.2em;margin-right:.2em;
+    font-size:12px;
+    text-align: center;
+}
+
+.detailbox strong{
+    background:0;
+    font-weight:800;
+    font-size:18px;
+    color: #000 !important;
+    text-align: center;
+    text-shadow:0 0 10px #EDE8DD;
+}
+
+#report h1{
+    margin:0;
+    border-bottom:1px solid #ccc
+}
+
+.sortbtn{
+    background:blue;
+    padding:1em;
+    border-radius:20px;
+    display:inline-block;
+    width:150px;
+    margin:.5em;
+    font-family: "Work Sans";
+    color:#fff;
+    font-size:18px;
+    font-weight: 100;
+    text-shadow:0 0 10px #ccc;
+    border: 0;
+    box-shadow:0 0 15px #DDE1ED;
+}
+
+
+#report select{
+    background:0;
+    box-shadow:0 0 20px #F5F4F0;
+    border:0;
+    padding:.5em;
+    border-radius:10px;
+    font-size:22px;
+    font-family: "Work Sans";
+    font-weight:100;
+}
+
+#report input[type=submit]{
+    
+    background:blue;
+    padding:1em;
+    border-radius:20px;
+    display:inline-block;
+    width:150px;
+    margin:.5em .5em .5em 1em;
+    font-family: "Work Sans";
+    color:#fff;
+    font-size:18px;
+    font-weight: 100;
+    text-shadow:0 0 10px #ccc;
+    border: 0;
+    box-shadow:0 0 15px #DDE1ED;
 }

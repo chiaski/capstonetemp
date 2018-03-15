@@ -17,7 +17,35 @@
       <link href="css/main.css" rel="stylesheet">
       <link href="css/leaflet.label.css" rel="stylesheet">
       
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">                                                                   
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">                                                          
+      
+      <script type="text/javascript">
+      
+      
+function sorty(what){
+    $("#report-area").hide();
+    var divList = $(".smallinfo");
+    if(what == 'price'){
+        divList.sort(function(a, b){
+            return $(a).data("cost")-$(b).data("cost")
+        });
+    }
+    if(what == 'quality'){
+        divList.sort(function(a, b){
+            return $(a).data("quality")-$(b).data("quality")
+        });
+    }
+    if(what == 'efficiency'){
+        divList.sort(function(a, b){
+            return $(a).data("efficiency")-$(b).data("efficiency")
+        });
+    }
+    
+    
+    $("#report-area").html(divList).fadeIn();
+}
+      
+      </script>
   </head>
   <body>
     
@@ -33,7 +61,7 @@
         <div class="info-box">
         <span style="float:right; font-size:18px; color: #ccc;" onclick="$('#information').fadeOut();">x</span>
         <h1>Viewing: <span class="txt-storename"></span></h1>
-        <p>You are currently viewing <span class="txt-storename"></span> located in Barangay <span class="txt-barangayname"></span>. After sample collection on <em>February 12</em>, it is found that the grain grade present is <span class="txt-graingrade"></span>, indicating a <span class="txt-graingradename"></span> quality.</p>
+        <center><p>You are currently viewing <span class="txt-storename"></span> located in Barangay <span class="txt-barangayname"></span>. After sample collection on <em>February 12</em>, it is found that the grain grade present is <span class="txt-graingrade"></span>, indicating a <span class="txt-graingradename"></span> quality.</p></center>
         
         <p> </p>
         
@@ -69,9 +97,102 @@
       
 <div id="report">
       
-<h1>Generate a Report</h1>      
+<h1>Sort</h1>
+    <a class="sortbtn" onclick="sorty('price');">Price</a>
+    <a  class="sortbtn" onclick="sorty('quality');">Quality</a>
+    <a class="sortbtn" onclick="sorty('efficiency');">Efficiency</a>
+    
+<div id="report-area">
+<div class="smallinfo storenumFour" data-cost="2" data-quality="3" data-efficiency="2">
+    <h2>Personal Collection</h2>
+        <h3>Real</h3>
+    <div class="smallinfobox">
+        <h3>Dinorado Yellow</h3>
+        
+        <div class="detailbox">
+        <strong>50</strong><br>Cost
+        </div>
+        <div class="detailbox">
+        <strong>B+</strong><br>Grade
+        </div>
+        <div class="detailbox">
+        <strong>21.74</strong><br>Efficiency
+        </div>
+    </div> 
+</div>
+    
+
+<div class="smallinfo storenumFour" data-cost="1" data-quality="4" data-efficiency="1">
+    <h2>Manang Eli's</h2>
+        <h3>Balibago</h3>
+    <div class="smallinfobox">
+        <h3>MRWN Dinorado Puro</h3>
+        
+        <div class="detailbox">
+        <strong>48</strong><br>Cost
+        </div>
+        <div class="detailbox">
+        <strong>B</strong><br>Grade
+        </div>
+        <div class="detailbox">
+        <strong>21.82</strong><br>Efficiency
+        </div>
+    </div> 
+</div>
+    
+    
+<div class="smallinfo storenumFour" data-cost="4" data-quality="2" data-efficiency="4">
+    <h2>Lhynne's Sari Sari</h2>
+        <h3>Balibago</h3>
+    <div class="smallinfobox">
+        <h3>Dinorado</h3>
+        <div class="detailbox">
+        <strong>57</strong><br>Cost
+        </div>
+        <div class="detailbox">
+        <strong>A-</strong><br>Grade
+        </div>
+        <div class="detailbox">
+        <strong>21.11</strong><br>Efficiency
+        </div>
+    </div> 
+</div>
+        
+    
+<div class="smallinfo storenumFour" data-cost="3" data-quality="1" data-efficiency="3">
+    <h2>Anna's Store</h2>
+        <h3>Balibago</h3>
+    <div class="smallinfobox">
+        <h3>Sinandomeng</h3>
+        
+        <div class="detailbox">
+        <strong>53</strong><br>Cost
+        </div>
+        <div class="detailbox">
+        <strong>A</strong><br>Grade
+        </div>
+        <div class="detailbox">
+        <strong>21.54</strong><br>Efficiency
+        </div>
+    </div> 
+</div>
+</div>
+    
+<h1>Generate a Report</h1>   
+    <p>Currently available: All reports are intended for citizens of the locality, adjusted per Barangay.</p>
+    
+    <center><form>
+    <select onsubmit="location = this.options[this.selectedIndex].value;">
+        <option value="realReport.pdf">Barangay Real</option>
+        <option value="poblacionReport.pdf">Barangay Poblacion 2</option>
+        <option value="balibagoReport.pdf">Barangay Balibago</option>
+    </select>
+    <input type="submit">
+    </form></center>
       
 </div>
+      
+      
       
       <script type="text/javascript">
           

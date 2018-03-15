@@ -84,3 +84,6 @@ function namethree(){
 function namefour(){
         $(".txt-nowviewing").text("Anna's Store in Brgy. Balibago").fadeIn();
 }
+
+
+
