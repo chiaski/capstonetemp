@@ -1,4 +1,7 @@
-
+function fadey(){
+    $("#omfgofmg").fadeOut("slow");
+    
+}
           //Markers
           
           var store1 = L.marker([13.87722222, 120.66777778]).addTo(mymap).on('click', clickStoreone);

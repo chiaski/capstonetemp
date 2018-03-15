@@ -44,16 +44,27 @@ function sorty(what){
     
     $("#report-area").html(divList).fadeIn();
 }
-      
       </script>
   </head>
   <body>
+      
+      
+<div id="omfgofmg" onclick="fadey();">
+    <div class="lmfao">
+    <h1>Rice Quality in Calatagan Batangas</h1>
+    <h2>A Data Visualization by Group 1, 12C - Coded by Chiara Amisola<br><br><em>Click anywhere to continue</em></h2>
+    </div>
+</div>
+      
     
 <div id="header">
     <h1>Rice Quality in Calatagan, Batangas</h1>
     <h2>Now viewing: <span class="txt-nowviewing"></span></h2>
       
 </div>
+      
+      
+      
 <div id="container">
     
     <div id="mapid"></div>
@@ -95,7 +106,7 @@ function sorty(what){
     
 </div>
       
-<div id="report">
+<div id="report" style="margin-bottom:2em;">
       
 <h1>Sort</h1>
     <a class="sortbtn" onclick="sorty('price');">Price</a>
@@ -181,18 +192,17 @@ function sorty(what){
 <h1>Generate a Report</h1>   
     <p>Currently available: All reports are intended for citizens of the locality, adjusted per Barangay.</p>
     
-    <center><form>
-    <select onsubmit="location = this.options[this.selectedIndex].value;">
+    <center>
+    <select class="fuck" id="fuck">
         <option value="realReport.pdf">Barangay Real</option>
         <option value="poblacionReport.pdf">Barangay Poblacion 2</option>
         <option value="balibagoReport.pdf">Barangay Balibago</option>
     </select>
-    <input type="submit">
-    </form></center>
+    <input type="submit" onclick="var lol = document.getElementById('fuck').value; window.location.href = lol;">
+    </center>
+     
       
 </div>
-      
-      
       
       <script type="text/javascript">
           
