@@ -11,7 +11,7 @@ function fadey(){
           var store4 = L.marker([13.92055556, 120.62416667]).on('mouseover', namefour).on('click', clickStorefour).addTo(mymap);
           
           function clickStoreone(){
-              $("#information").fadeOut().fadeIn();
+              $("#information").hide();
               //alert("clicked store 1 btich!!");
               $(".txt-storename").text("Personal Collection");
               $(".txt-barangayname").text("Real");
@@ -23,10 +23,11 @@ function fadey(){
               
               $(".grain-grade").text("B+").css("background", "#E0E63E");
               $(".image-sample").attr("src", "img/storeonesample.png");
+              $("#information").fadeIn();
           }
       
           function clickStoretwo(){
-              $("#information").fadeOut().fadeIn();
+              $("#information").hide();
               //alert("clicked store 1 btich!!");
               $(".txt-storename").text("Manang Eli's Sari Sari");
               $(".txt-barangayname").text("Real");
@@ -38,11 +39,12 @@ function fadey(){
               
               $(".grain-grade").text("B").css("background", "#EBD13D");
               $(".image-sample").attr("src", "img/storetwosample.png");
+              $("#information").fadeIn();
           }
 
 
           function clickStorethree(){
-              $("#information").fadeOut().fadeIn();
+              $("#information").hide();
               //alert("clicked store 1 btich!!");
               $(".txt-storename").text("Lhynne's Sari Sari");
               $(".txt-barangayname").text("Poblacion 2");
@@ -54,10 +56,11 @@ function fadey(){
               
               $(".grain-grade").text("A-").css("background", "#75BA59");
               $(".image-sample").attr("src", "img/storethreesample.png");
+              $("#information").fadeIn();
           }
 
           function clickStorefour(){
-              $("#information").fadeOut().fadeIn();
+              $("#information").hide();
               //alert("clicked store 1 btich!!");
               $(".txt-storename").text("Anna's Sari Sari");
               $(".txt-barangayname").text("Balibago");
@@ -69,6 +72,7 @@ function fadey(){
               
               $(".grain-grade").text("A").css("background", "#38AB48");
               $(".image-sample").attr("src", "img/storefoursample.png");
+              $("#information").fadeIn();
           }
 
 
